@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-Player::Player() {
+Player::Player() : inventory(10) {
     name = "Hero";
     health = 100;
     maxHealth = 100;
@@ -15,7 +15,7 @@ Player::Player() {
     cout << "Default constructor called." << endl;
 }
 
-Player::Player(string name, int health, int atttackPower) {
+Player::Player(string name, int health, int atttackPower) : inventory(10) {
     this->name = name;
     this->health = health;
     this->maxHealth = health;
@@ -55,4 +55,13 @@ int Player::getAttackPower() const {
 
 void Player::displayStatus() const {
     cout << "[" << name << "] - HP: " << health << "/" << maxHealth << endl;
+    return;
+}
+
+void Player::showInventory() const {
+    inventory.display();
+    return;
+}
+void Player::addItem(const Item& item) {
+    inventory.addItem(item);
 }

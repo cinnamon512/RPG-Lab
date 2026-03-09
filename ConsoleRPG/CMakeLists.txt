@@ -5,4 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(ConsoleRPG main.cpp
         Player.cpp
-        Player.h)
+        Player.h
+        Item.cpp
+        Item.h
+        Inventory.cpp
+        Inventory.h)
