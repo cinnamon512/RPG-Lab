@@ -14,7 +14,7 @@ Inventory::Inventory(int capacity) {
 }
 
 Inventory::~Inventory() {
-    delete items;
+    delete[] items;
 }
 
 bool Inventory::addItem(const Item& item) {
